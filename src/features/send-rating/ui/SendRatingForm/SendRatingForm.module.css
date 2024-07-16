@@ -1,0 +1,6 @@
+.SendRatingForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    max-width: 500px;
+}
