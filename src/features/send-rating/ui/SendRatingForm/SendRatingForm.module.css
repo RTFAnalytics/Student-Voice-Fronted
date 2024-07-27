@@ -1,6 +1,116 @@
 .SendRatingForm {
     display: flex;
     flex-direction: column;
-    gap: var(--space-m);
-    max-width: 500px;
+    gap: 28px;
+    max-width: 732px;
+    padding: 32px;
+    border: 1px solid #D3D3D3;
+    box-shadow: 0px 2px 6px 0px #00000026;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.SendRatingForm__input {
+    max-width: 555px;
+}
+
+.SendRatingForm__labelWrapper {
+    gap: 3px;
+}
+
+.SendRatingForm__requiredStar {
+    color: #EF302B;
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold)
+}
+
+.SendRatingForm__label {
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    color: #7A7A7A;
+    line-height: 19.5px;
+}
+
+.SendRatingForm__label_sublabel {
+    font-weight: var(--font-weight-regular);
+}
+
+.SendRatingForm__textValue {
+    font-size: 20px;
+    font-weight: var(--font-weight-regular);
+    color: #222222;
+    line-height: 24.38px;
+}
+
+.SendRatingForm__formItem{
+    margin-bottom: 0;
+    gap: 16px;
+}
+
+.SendRatingForm__submitButton {
+    background-color: #1E4391;
+    align-self: end;
+}
+
+.SendRatingForm__submitButton:hover {
+    background-color: #1E4391 !important;
+    filter: brightness(0.9)
+}
+
+.SendRatingForm__submitButton:active {
+    background-color: #1E4391 !important;
+    filter: brightness(0.7);
+}
+
+.SendRatingForm__formItemCheck > div {
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.SendRatingForm__formItemCheck > div > div {
+    padding: 0 !important;
+    flex: auto !important;
+}
+
+.SendRatingForm__formItemCheck > div > div > label:after {
+    display: none;
+}
+
+.SendRatingForm__rate li:not(:last-child) {
+    margin-inline-end: 0 !important;
+}
+
+.SendRatingForm__rate {
+    display: flex;
+    gap: 26px;
+}
+
+@media (width < 732px) {
+    .SendRatingForm{
+        padding: 32px 40px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .SendRatingForm__formItem{
+        margin-bottom: 0;
+        gap: 12px;
+    }
+
+    .SendRatingForm__label,
+    .SendRatingForm__requiredStar {
+        font-size: 12px;
+        line-height: 14.63px;
+    }
+
+    .SendRatingForm__textValue {
+        font-size: 14px;
+        line-height: 17.07px;
+    }
+}
+
+@media (width < 320px) {
+    .SendRatingForm{
+        padding: 32px 20px;
+    }
 }

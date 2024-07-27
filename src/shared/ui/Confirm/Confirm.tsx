@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Namespace } from '@shared/config/i18n';
 import { getBemClasses, typedMemo } from '@shared/lib';
 import { TestProps } from '@shared/types';
-import { Text, Button } from '@shared/ui';
 
 import styles from './Confirm.module.css';
+import {Button, Typography} from "antd";
 
 export type Props = TestProps & Readonly<{
     /**
@@ -84,17 +84,17 @@ export const Confirm: FC<Props> = typedMemo(function Confirm({
         <div className={getBemClasses(styles, 'wrapper')}>
             <div className={getBemClasses(styles)} data-testid={dataTestId}>
                 {title
-                    ? <Text className={getBemClasses(styles, 'title')}>
+                    ? <Typography className={getBemClasses(styles, 'title')}>
                         {title}
-                    </Text>
+                    </Typography>
                     : null
                 }
 
                 {contentComponent?.(giveAnswer) ??
                     <>
-                        <Text className={getBemClasses(styles, 'text')}>
+                        <Typography className={getBemClasses(styles, 'text')}>
                             {text}
-                        </Text>
+                        </Typography>
 
                         <div className={getBemClasses(styles, 'actions')}>
                             <Button
@@ -108,7 +108,7 @@ export const Confirm: FC<Props> = typedMemo(function Confirm({
                             </Button>
                             <Button
                                 onClick={cancel}
-                                variant="flat"
+                                type="default"
                                 color="default"
                                 className={getBemClasses(styles, 'action')}
                                 data-testid={`${dataTestId}.cancelButton`}

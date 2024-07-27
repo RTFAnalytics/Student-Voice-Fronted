@@ -23,11 +23,6 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'public/dist' },
-            ],
-        }),
     ];
 
     if (isDev) {

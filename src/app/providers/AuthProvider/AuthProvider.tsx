@@ -9,7 +9,7 @@ import {
 } from 'react';
 
 import { typedMemo } from '@shared/lib';
-import { Loader } from '@shared/ui';
+import {Spin} from "antd";
 
 export type AuthContextProps = {
     login: () => void;
@@ -46,7 +46,7 @@ export const AuthContextProvider: FC<AuthContextProviderProps> = typedMemo(funct
     }, []);
 
     if (isLoading) {
-        return <Loader />;
+        return <Spin />;
     }
     return (
         <AuthProvider.Provider
