@@ -1,1 +1,373 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+}
+
+/* body,
+html {
+  overflow-x: hidden;
+} */
+
+input {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: blue;
+}
+
+/* -------------------------------------------------- */
+h1 {
+  font-weight: 600;
+  font-size: 52px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.main-text {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.descriptor {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* -------------------------------------------------- */
+button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  font-weight: 600;
+}
+
+.blue-button {
+  background-color: #1E4391;
+}
+
+.blue-button:active {
+  background-color: #0F2B5E;
+}
+
+.transparent-button {
+  border: 2px #FFFFFF solid;
+}
+
+.transparent-button:active {
+  background-color: #FFFFFF !important;
+  color: #1E4391 !important;
+}
+
+.red-button {
+  background-color: #EF302B;
+}
+
+.red-button:active {
+  background-color: #C0231F;
+}
+
+.big-button {
+  width: 320px;
+  height: 80px;
+  border-radius: 24px;
+  font-size: 18px;
+}
+
+.medium-button {
+  width: 280px;
+  height: 72px;
+  border-radius: 18px;
+  font-size: 16px;
+}
+
+.small-button {
+  width: 240px;
+  height: 64px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+/* Контейнер для тоггла */
+.toggle-switch {
+  width: 54px;
+  height: 26px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Кружок внутри тоггла */
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  background-color: #1E4391;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.3s ease;
+}
+
+.toggle-switch-active {
+  background-color: #1E4391;
+}
+
+.toggle-switch-active .toggle-knob {
+  background-color: #FFFFFF;
+  left: 32px;
+}
+
+
+
+
+/* Градиент тогл */
+.gradient-toggle-switch {
+  width: 54px;
+  height: 26px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Кружок внутри тоггла */
+.gradient-toggle-knob {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(189.06% 144.25% at 53.08% -36.55%, #FF011B 0%, #FF0189 38.54%, #FF911E 79.59%, #FFEB00 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.3s ease;
+}
+
+.gradient-toggle-switch-active {
+  background: linear-gradient(270deg, #FF2D7F -0.71%, #FB3727 47.63%, #FEEA0F 100%);
+}
+
+.gradient-toggle-switch-active .gradient-toggle-knob {
+  background: #FFFFFF;
+  left: 32px;
+}
