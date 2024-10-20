@@ -1,23 +1,32 @@
-<div>
-  <button class="blue-button big-button">Большая синяя кнопка</button>
-  <button class="transparent-button big-button">Большая прозрачная кнопка</button>
-  <button class="red-button big-button">Большая красная кнопка</button>
-
-  <button class="blue-button medium-button">Средняя синяя кнопка</button>
-  <button class="transparent-button medium-button">Средняя прозрачная кнопка</button>
-  <button class="red-button medium-button">Средняя красная кнопка</button>
-
-  <button class="blue-button small-button">Малая синяя кнопка</button>
-  <button class="transparent-button small-button">Малая прозрачная кнопка</button>
-  <button class="red-button small-button">Малая красная кнопка</button>
-
-  <div class="toggle-switch" [ngClass]="{'toggle-switch-active': isActiveBlueToggle}" (click)="toggleBlue()">
-    <div class="toggle-knob"></div>
+<div class="login-page background-image">
+  <div class="header">
+    <img src="/img/rtf-logo.svg" class="logo">
+    <div *ngIf="!first_page" class="second-page-titles">
+      <h1 class="white-center-text title-second-page">Голос студента</h1>
+      <h3 class="white-center-text third-title">Student Voice</h3>
+    </div>
+  </div>
+  <div *ngIf="first_page">
+    <h1 class="white-center-text title-first-page">Голос студента</h1>
+    <h3 class="white-center-text third-title">Student Voice</h3>
+    <h3 class="white-center-text hello">Добро пожаловать!</h3>
+    <button type="button" class="transparent-button small-button center-button"
+      (click)="openSecondPage()">Войти</button>
+  </div>
+  <div *ngIf="!first_page">
+    <div class="form">
+      <h3 class="black-center-text enter-text">Вход в аккаунт</h3>
+      <div class="input-center">
+        <input type="text" class="input-field user-name" placeholder="Введите имя пользователя"
+          [ngClass]="{'filled': isFilledUser, 'invalid': isInvalidUser}" (focus)="onFocus('user')"
+          (blur)="onBlur('user')" (input)="onInput($event, 'user')" />
+        <input type="text" class="input-field password" placeholder="Введите пароль"
+          [ngClass]="{'filled': isFilledPassword, 'invalid': isInvalidPassword}" (focus)="onFocus('password')"
+          (blur)="onBlur('password')" (input)="onInput($event, 'password')" />
+      </div>
+      <button class="main-text">Забыли пароль?</button>
+      <button type="button" class="blue-button small-button center-button">Войти</button>
+    </div>
   </div>
 
-  <div class="gradient-toggle-switch" [ngClass]="{'gradient-toggle-switch-active': isActiveGradientToggle}"
-    (click)="toggleGradient()">
-    <div class="gradient-toggle-knob"></div>
-  </div>
-  <p>testing</p>
 </div>

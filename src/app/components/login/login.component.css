@@ -1,0 +1,85 @@
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/img/lines.svg');
+  background-color: #1E4391;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header {
+  height: 128px;
+  width: 100%;
+}
+
+.title-first-page {
+  margin-top: 100px;
+}
+
+.third-title {
+  margin-top: 19px;
+}
+
+.white-center-text {
+  color: white;
+  text-align: center;
+}
+
+.black-center-text {
+  color: black;
+  text-align: center;
+}
+
+.hello {
+  margin-top: 117px;
+  margin-bottom: 63px;
+}
+
+.center-button {
+  margin: 0 auto;
+}
+
+.second-page-titles {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.form {
+  width: 752px;
+  height: 485px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 72px;
+}
+
+.enter-text {
+  padding-top: 31px;
+  margin-bottom: 60px;
+}
+
+.input-center {
+  text-align: center;
+}
+
+.user-name {
+  margin-bottom: 60px;
+}
+
+.password {
+  margin-bottom: 8px;
+}
+
+.main-text {
+  margin-bottom: 26px;
+  margin-left: 119px;
+  color: #1E4391;
+}

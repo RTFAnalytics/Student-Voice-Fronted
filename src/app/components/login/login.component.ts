@@ -6,17 +6,52 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css'] // Исправлено на styleUrls
 })
 export class LoginComponent {
-  isActiveBlueToggle: boolean = false;
-  isActiveGradientToggle: boolean = false;
+  first_page: boolean = true;
 
-  toggleBlue() {
-    this.isActiveBlueToggle = !this.isActiveBlueToggle;
+  isFilledUser = false; // Состояние заполненного поля для имени пользователя
+  isInvalidUser = false; // Состояние валидации (ошибка) для имени пользователя
+
+  isFilledPassword = false; // Состояние заполненного поля для пароля
+  isInvalidPassword = false; // Состояние валидации (ошибка) для пароля
+
+  openSecondPage() {
+    this.first_page = !this.first_page;
   }
 
-  toggleGradient() {
-    this.isActiveGradientToggle = !this.isActiveGradientToggle;
+  onFocus(type: 'user' | 'password') {
+    if (type === 'user') {
+      this.isInvalidUser = false;
+    } else {
+      this.isInvalidPassword = false;
+    }
+  }
+
+  onBlur(type: 'user' | 'password') {
+    if (type === 'user') {
+      if (!this.isFilledUser) {
+        this.isInvalidUser = true; // Показываем ошибку, если поле пустое
+      }
+    } else {
+      if (!this.isFilledPassword) {
+        this.isInvalidPassword = true; // Показываем ошибку, если поле пустое
+      }
+    }
+  }
+
+  onInput(event: any, type: 'user' | 'password') {
+    if (type === 'user') {
+      this.isFilledUser = event.target.value.length > 0;
+      if (this.isFilledUser) {
+        this.isInvalidUser = false; // Если есть текст, ошибки нет
+      }
+    } else {
+      this.isFilledPassword = event.target.value.length > 0;
+      if (this.isFilledPassword) {
+        this.isInvalidPassword = false; // Если есть текст, ошибки нет
+      }
+    }
   }
 }

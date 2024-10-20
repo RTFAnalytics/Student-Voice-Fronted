@@ -211,9 +211,9 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: blue;
-}
+/* body {
+  background-color: wheat;
+} */
 
 /* -------------------------------------------------- */
 h1 {
@@ -337,9 +337,6 @@ button {
   left: 32px;
 }
 
-
-
-
 /* Градиент тогл */
 .gradient-toggle-switch {
   width: 54px;
@@ -370,4 +367,42 @@ button {
 .gradient-toggle-switch-active .gradient-toggle-knob {
   background: #FFFFFF;
   left: 32px;
+}
+
+
+
+/* Базовый стиль для поля ввода */
+.input-field {
+  width: 496px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid #7A7A7A;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 16px;
+  color: #7A7A7A;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Плейсхолдер (неактивное поле) */
+.input-field::placeholder {
+  color: #7A7A7A;
+  text-align: left;
+}
+
+/* Заполненное поле (когда есть текст) */
+.input-field.filled {
+  color: #222222;
+}
+
+/* Активное поле (когда фокус) */
+.input-field:focus {
+  border-color: #1E4391;
+  color: #222222;
+}
+
+/* Валидированное поле (если ошибка валидации) */
+.input-field.invalid {
+  border-color: #EF302B;
 }
