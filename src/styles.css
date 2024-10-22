@@ -205,6 +205,8 @@ select {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  /* Отключаем горизонтальный скролл */
 }
 
 body {
